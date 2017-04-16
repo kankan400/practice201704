@@ -1,4 +1,5 @@
 #unicode error!!
+# see you
 
 from HTMLParser import HTMLParser
 import urllib2
@@ -38,4 +39,3 @@ def main(argv):
 
 if __name__ == '__main__':
 	main(sys.argv)	
-
