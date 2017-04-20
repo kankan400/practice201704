@@ -15,12 +15,12 @@ class GetLink(HTMLParser):
 		if tag == 'a':
 			for name, value in attrs:
 				if name == 'href':
-					self.link_path = value
+					self.link_path = value.encode()
 					self.link_flag = True
 
 	def handle_data(self, data):
 		if self.link_flag:
-			print u"%s   %s" %(self.link_path, data)
+			print "%s   %s" %(self.link_path, data)
 			self.link_flag = False
 
 	def handle_endtag(self, tag):
